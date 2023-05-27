@@ -1,0 +1,46 @@
+.currency-container {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-grow: 1;
+  padding-top: 50px;
+  ul.list-group {
+    flex-grow: 1;
+    margin-top: 20px;
+    > li.list-group-item {
+      align-items: center;
+      display: flex;
+      margin: 0;
+      .currency-value {
+        text-align: center;
+        height: fit-content;
+      }
+      .currency-symbol {
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+  .currency-select {
+    width: 50%;
+    margin-left: auto;
+  }
+  .form-label {
+    text-align: right;
+  }
+}
+
+.currency-calculator {
+  margin: 50px auto;
+  display: flex;
+  gap: 24px;
+  padding: 0 24px;
+  > div {
+    > .v-select {
+      margin-top: 12px;
+    }
+    > input {
+      height: 33px;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/Roboto-Light.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination-container {
+  margin-top: 20px;
+  justify-content: center;
+  > li {
+    flex-grow: 1;
+    max-width: 50px;
+    > button {
+      display: block;
+      margin: auto;
+      border: none;
+      background: $gray-300;
+      border-radius: 50%;
+      width: 100%;
+      max-width: 40px;
+      aspect-ratio: 1/1;
+      transition: 0.2s;
+      &.active-page {
+        background: $blue-300;
+        color: #fff;
+      }
+      &:not(.active-page):hover {
+        background: $gray-400;
+      }
+    }
+  }
+}
+
+.v-select {
+  &.vs--open {
+    .vs__actions > svg {
+      transform: translateX(0%);
+    }
+  }
+  &.hide-close {
+    .vs__clear {
+      display: none;
+    }
+  }
+  .vs__actions {
+    overflow: hidden;
+    > svg {
+      transform: translateX(calc(100% + 10px));
+      width: 18px;
+    }
+    > button > svg {
+      margin-top: -2px;
+    }
+  }
+  > .vs__dropdown-menu {
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+}

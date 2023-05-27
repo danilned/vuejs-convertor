@@ -1,0 +1,17 @@
+.login-layout {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  > .form-group {
+    max-width: 300px;
+    > .btn {
+      margin-top: 20px;
+      width: 100%;
+    }
+    > .form-label {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}

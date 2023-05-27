@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+.header-container {
+  display: flex;
+  gap: 24px;
+  padding: 12px 24px;
+  > a {
+    text-decoration: none;
+    font-size: 18px;
+    color: $gray-500;
+    &.router-link-exact-active {
+      color: $indigo-400;
+    }
+  }
+}
